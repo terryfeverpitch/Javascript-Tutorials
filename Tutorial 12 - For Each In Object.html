@@ -1,0 +1,35 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+
+<button type = "button" onclick = "myFunc()">
+Click
+</button>
+
+<script>
+function myFunc()
+{
+	var str = "", y;
+	var myObj = {name:"Terry", title:"Student", age:20};
+	
+	for each(y in myObj)
+	{
+		str = str + y;
+	}
+	
+	document.getElementById("demo").innerHTML = "Result = " + str;
+	// str should be "TerryStudent20"
+}
+</script>
+
+</h1>
+</body>
+
+
+</html>

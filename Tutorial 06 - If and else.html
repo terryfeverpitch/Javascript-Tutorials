@@ -1,0 +1,39 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+
+<button type = "button" onclick = "myFunc()">
+Click
+</button>
+
+<script>
+function myFunc()
+{
+  var x, y = "3";
+  if(y == 3)
+  {
+    x = "y equals 3."
+  }
+  else if(y == 4)
+  {
+    x = "y equals 4"
+  }
+  else
+  {
+    x = "y is not 3 or 4."
+  }
+  document.getElementById("demo").innerHTML = "Result = " + x;
+}
+</script>
+
+</h1>
+</body>
+
+
+</html>

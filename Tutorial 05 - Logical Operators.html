@@ -1,0 +1,31 @@
+<head>
+<script>
+
+// 1. ==  value equal.
+// 2. === value and type both equal.
+// 3. !=  value not equal.
+// 4. !== value and type both nor equal.
+
+function myFunc()
+{
+  var x, y = 3, z = "3";
+  // x = (y===z);
+  x = (y == 3) ? 100 : 0;
+  document.getElementById("demo").innerHTML = "Result = " + x;
+}
+</script>
+</head>
+
+<body>
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+<button type = "button" onclick = "myFunc()">
+Click
+</button>
+
+</h1>
+</body>
+
+
+</html>

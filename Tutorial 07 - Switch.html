@@ -1,0 +1,54 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+
+<button type = "button" onclick = "myFunc()">
+Click
+</button>
+
+<script>
+function myFunc()
+{
+  var x, y = "3";
+
+  switch(y) // case [value and type are both equal.]
+  {
+    case 3: // 3 === "3"  ->  false
+      x = "y is 3."
+      break;
+    case 4:
+      x = "y is 4."
+      break;
+    default:
+      x = "y is not 3 or 4."
+      break;
+  }
+/*
+  if(y == 3)
+  {
+    x = "y equals 3."
+  }
+  else if(y == 4)
+  {
+    x = "y equals 4"
+  }
+  else
+  {
+    x = "y is not 3 or 4."
+  }
+*/
+  document.getElementById("demo").innerHTML = "Result = " + x;
+}
+</script>
+
+</h1>
+</body>
+
+
+</html>

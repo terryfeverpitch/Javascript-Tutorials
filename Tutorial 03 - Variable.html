@@ -1,0 +1,27 @@
+<html>
+
+<head>
+<script>
+var x = "Global X";
+function myFunc()
+{
+  var x;
+  x = "Local X";
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+</head>
+
+<body>
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+<button type = "button" onclick = "myFunc()">
+Click
+</button>
+
+</h1>
+</body>
+
+
+</html>

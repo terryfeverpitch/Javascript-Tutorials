@@ -1,0 +1,59 @@
+<html>
+
+<head>
+</head>
+
+<body onload = "loadFunc()" onunload = "unloadFunc()"> //unload does not support in Chrome.
+
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+name : 
+<input onfocus = "eventListener(1)" onblur = "eventListener(2)" onchange = "eventListener(3)" onmouseover = "eventListener(4)">
+</input>
+
+</h1>
+
+<script>
+
+function loadFunc()
+{
+	alert("Welcome...");
+	document.getElementById("demo").innerHTML = "Event = " + str;
+}
+
+function unloadFunc()
+{
+	alert("GoodBye...");
+	document.getElementById("demo").innerHTML = "Event = " + str;
+}
+
+function eventListener(x)
+{
+	var str = "";
+
+	switch(x)
+	{
+		case 1:
+			str = "Get focus.";
+			break;
+		case 2:
+			str = "Lost focus.";
+			break;
+		case 3:
+			str = "Data Changed.";
+			break;
+		case 4:
+			str = "Mouse Over.";
+			break;
+
+	}
+	
+	document.getElementById("demo").innerHTML = "Event = " + str;
+}
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,35 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+
+<button type = "button" onclick = "myFunc()">
+Click
+</button>
+
+<script>
+function myFunc()
+{
+	try
+	{
+		// alert("No Problem."); // no problem.
+		fdafalert("No Problem."); // error.
+	}
+	catch(error)
+	{
+		alert(error);
+		document.getElementById("demo").innerHTML = error;
+	}
+}
+</script>
+
+</h1>
+</body>
+
+
+</html>

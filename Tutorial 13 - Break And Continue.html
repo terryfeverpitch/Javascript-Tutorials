@@ -1,0 +1,37 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<h1>
+
+<p id = "demo"> This is paragraph.</p>
+
+<button type = "button" onclick = "myFunc()">
+Click
+</button>
+
+<script>
+function myFunc()
+{
+	var x = 0;
+	
+	for(i = 0 ; i <= 100 ; i++)
+	{
+		// if(i == 11) break; // result = 55
+		if(i == 50) continue; // result = 5000
+		x += i;
+		
+	}
+	
+	document.getElementById("demo").innerHTML = "Result = " + x;
+	// str should be "TerryStudent20"
+}
+</script>
+
+</h1>
+</body>
+
+
+</html>
