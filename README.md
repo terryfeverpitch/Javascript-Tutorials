@@ -1,7 +1,7 @@
 Javascript-Tutorials
 ====================
 
-Some Javascript tutorials and example.
+Some Javascript tutorials and examples.
 
 W3Schools Javascript Tutorial :
 
