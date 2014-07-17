@@ -15,14 +15,28 @@ Click
 <script>
 function myFunc()
 {
-	var str = "", y;
+	var str = "";
 	var myObj = {name:"Terry", title:"Student", age:20};
 	
+	/*
 	for each(y in myObj)
 	{
 		str = str + y;
 	}
-	
+	*/
+	for(var index in myObj) 
+	{ 
+		str += myObj[index];
+	}
+
+	/*	// check for the attribute that you are finding is from myObj. 		
+	for(var index in myObj) {
+		if (object.hasOwnProperty(index)) 
+		{
+			var attr = object[index];
+   		}
+   	}
+   	*/	
 	document.getElementById("demo").innerHTML = "Result = " + str;
 	// str should be "TerryStudent20"
 }
