@@ -1,0 +1,52 @@
+<html>
+<head>
+<body onload = 'runTimer()'>
+<p id = 'demo'>
+	paragraph.
+</p>
+	<script>
+		// find complete reference in following URL.
+		// http://www.w3schools.com/jsref/jsref_obj_array.asp
+		var array = new Array();
+		var newline = "<br>";
+		array[0] = "static 0";
+		array[1] = "static 1";
+		document.write(array  + newline);
+		
+		array.push("element 1"); // push back.
+		document.write(array + newline);
+		
+		array.pop(); // pop back.
+		document.write(array + newline);
+		
+		array.unshift("element 2"); // push front.
+		document.write(array + newline);
+		
+		array.shift(); // pop front.
+		document.write(array + newline);
+
+		array.splice(1, 0, "temp"); // insert
+		document.write(array + newline);
+
+		array.splice(1, 1); // remove
+		document.write(array + newline);
+
+		var a2 = new Array();
+		a2[0] = "5";
+		a2[1] = "3";
+		a2[2] = "1";
+		a2[3] = "7";
+		document.write(a2 + newline);
+
+		a2.sort();
+		document.write(a2 + newline);
+
+		a2.reverse();
+		document.write(a2 + newline);
+
+		var a3 = array.concat(a2); // a3 = array + a2;
+		document.write(a3);
+	</script>
+</body>
+</head>
+</html>
