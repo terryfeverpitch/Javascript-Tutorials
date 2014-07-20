@@ -1,0 +1,33 @@
+<html>
+<head>
+<body>
+<p id = 'demo'>
+	Browser <br>
+	1. var str1 = "my_username = white"; <br>
+	2. document.cookie = str1;
+	<HR>
+</p>
+	<script>
+	document.cookie = "name=Terry";
+	document.cookie = "date=2000.01.01";
+	// document.write(document.cookie + "<br>");
+	
+	var a = document.cookie.split(';');
+	var i, attr, value;
+	
+	for(i = 0 ; i < a.length ; i++)
+	{
+		attr  = a[i].substr(0, a[i].indexOf("="));
+		value = a[i].substr(a[i].indexOf("=") + 1);
+		
+		if(attr == 'name') // may not work in Google Chrome.
+		{
+			document.write( i + ". " + attr + "<br>");
+			alert("Welcome again, " + value);
+		}
+	}
+	
+	</script>
+</body>
+</head>
+</html>

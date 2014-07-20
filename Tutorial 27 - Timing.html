@@ -1,0 +1,46 @@
+<html>
+<head>
+<body>
+<p id = 'demo'>
+	Timing <br>
+	1. var t1 = setInterval("JS function", ms); <br>
+	2. clearInterval(t1); <br>
+	3. var t2 = setTimeout("JS function", ms);  // one time only.<br>
+	4. clearTimeout(t2); <br>
+	<HR>
+	Press "Begin" to start timer. <br>
+	Press "Stop" to stop the timer.
+	<HR>
+</p>
+
+<p id = 'label'>
+	
+</p>
+
+<button onclick = "func1()"> Begin </button>
+<button onclick = "func2()"> Stop </button>
+
+<script>
+var v;
+
+function func1()
+{
+	// document.getElementById("label").innerHTML = "Begin...";
+	v = setInterval("showCurrentTime()", 1000);
+}
+
+function func2()
+{
+	// document.getElementById("label").innerHTML = "Stop...";
+	clearInterval(v);
+}
+
+function showCurrentTime()
+{
+	document.getElementById('label').innerHTML = new Date();
+}
+	
+</script>
+</body>
+</head>
+</html>

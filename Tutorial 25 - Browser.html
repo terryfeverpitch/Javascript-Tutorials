@@ -1,0 +1,21 @@
+<html>
+<head>
+<body>
+<p id = 'demo'>
+	Browser
+	<HR>
+</p>
+	<script>
+	// document.write("Language = " + navigator.language);
+	/*
+	for(var obj in navigator)
+		document.write(obj + " = " +　navigator[obj] + "<br>");
+	*/
+	
+	for(var obj in navigator.plugins)
+		document.write(obj + " = " +　navigator.plugins[obj].name + "<br>");
+		
+	</script>
+</body>
+</head>
+</html>

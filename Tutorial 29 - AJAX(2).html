@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+AJAX (2) <br>
+1. var xmlhttp = XMLHttpRequest(). <br>
+2. open and send. <br>
+3. onreadystatechange = function. <br>
+
+<p id = "demo"> paragraph. </p>
+<button onclick = "loadXML()"> Load </button>
+
+<script>
+function loadXML()
+{
+	var watchDog = new XMLHttpRequest();
+	watchDog.onreadystatechange = function()
+	{
+		var str = "stage changed...";
+		document.getElementById("demo").innerHTML = str;
+	}
+	watchDog.open("GET", "ajax_info.txt", true); // next tutorial...
+	watchDog.send();
+}
+</script>
+</body>
+</html>

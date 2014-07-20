@@ -1,0 +1,31 @@
+<html>
+<head>
+<body>
+<p id = 'demo'>
+	Regular Expression.	
+	<HR>
+</p>
+	<script>
+	// find complete reference in following URL.
+	// http://www.w3schools.com/js/js_regexp.asp
+	var newline = "<br>";
+	var str = "Lin was Nick but Lin is now Rocket 2012.";
+	var find_Lin = new RegExp("Lin", "gi");
+	var find_lin_gi = new RegExp("lin", "gi");
+	var find_lin_g = new RegExp("lin", "g");
+	var find_09  = new RegExp("[0-9]", "g"); // var patt = /[0-9]]/g;
+	var find_odd  = new RegExp("[1,3,5,7,9]", "g");
+	document.write(str + newline);
+	document.write("RegExp(\"Lin\", \"gi\") " + str.match(find_Lin) + newline);
+	document.write("RegExp(\"lin\", \"gi\") " + str.match(find_lin_gi) + newline);
+	document.write("RegExp(\"lin\", \"g\") " + str.match(find_lin_g) + newline);
+	document.write("RegExp(\"[0-9]\", \"g\") " + str.match(find_09) + newline);
+	document.write("RegExp(\"[odd]\", \"g\") " + str.match(find_odd) + newline);
+	document.write("exec, find first match and return = " + find_Lin.exec(str) + newline);
+	document.write("test, if find match return true = " + find_Lin.test(str) + newline);
+	document.write("Replace \"Lin\" to \"James\" = " + str.replace(/lin/gi, "James") + newline);
+	
+	</script>
+</body>
+</head>
+</html>

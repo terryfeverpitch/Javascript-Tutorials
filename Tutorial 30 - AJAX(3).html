@@ -1,0 +1,31 @@
+<html>
+<head> 
+	AJAX (3) <br>
+	1. readyState and status. <br>
+	2. responseText and responseXML. <br>
+	<HR>
+</head>
+
+<script>
+	function loadXML()
+	{
+		var watchDog = new XMLHttpRequest();
+		watchDog.onreadystatechange = function()
+		{
+			// var str = "Yes, changed!";
+			var str = watchDog.responseText;
+			if(watchDog.readyState == 4 && watchDog.status == 200)
+				document.getElementById("label").innerHTML = str;
+		}
+		watchDog.open("GET", "ajax_info.txt", true);
+		watchDog.send();
+	}
+</script>
+	
+<body>
+	<p id = "label"> Label </p>
+	<button onclick = "loadXML()"> Load </button>
+	
+</body>
+
+</html>

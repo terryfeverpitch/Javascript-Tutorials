@@ -1,0 +1,48 @@
+<html>
+<head>
+<body>
+<p id = 'demo'>
+	Math Object
+	<HR>
+	1. Class / Instance method. <BR>
+	2. Attribute : Math.E / Math.LN2 / Math.LN10 / Math.PI <BR>
+	3. Math.floor() / Math.ceil() / Math.round() <BR>
+	4. Math.max() / Math.min() <BR>
+	5. Math.random() / Math.abs() / Math.log() / Math.exp() / Math.sin() / Math.asin() <BR>
+	<BR>
+	
+	<HR>
+</p>
+	<script>
+	// find complete reference in following link.
+	// http://www.w3schools.com/js/js_math.asp
+	var newline = "<br>";
+	document.write("E = " + Math.E + newline);
+	document.write("LN2 = " + Math.LN2 + newline);
+	document.write("LN10 = " + Math.LN10 + newline);
+	document.write("PI = " + Math.PI + newline);
+	
+	var x = 3.1415926; document.write("x = " + x + newline);
+	var ceil = Math.ceil(x);	document.write("x ceil = " + ceil + newline);
+	var floor = Math.floor(x);	document.write("x floor = " + floor + newline);
+	var round = Math.round(x);	document.write("x round = " + round + newline);
+	
+	var a = 3.14, b = 2.78; 	document.write("a = " + a + " b " + b + newline);
+	var maxAB = Math.max(a, b); document.write("Max[a, b] = " + maxAB + newline);
+	var minAB = Math.min(a, b); document.write("Min[a, b] = " + minAB + newline);
+	
+	var random = Math.random(); document.write("Random = " + random + newline);
+	
+	var t = -101; 				document.write("t = " + t + newline);				
+	var abst = Math.abs(t);	document.write("ABS(t) = " + abst + newline);
+	
+	document.write("log( E ) = " + Math.log(Math.E) + newline);
+	document.write("exp( E ) = " + Math.exp(Math.E) + newline);
+	
+	document.write("sin(PI) = " + Math.sin(Math.PI) + newline);
+	document.write("arcsin(0) = " + Math.asin(0) + newline);
+	
+	</script>
+</body>
+</head>
+</html>
