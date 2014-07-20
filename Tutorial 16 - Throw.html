@@ -15,7 +15,7 @@ Click
 <script>
 function myFunc()
 {
-	var obj = {nam : "Terry", age : "20"};
+	var obj = {name : "Terry", age : "20"};
 	try
 	{
 		// alert("No Problem."); // no problem.
@@ -30,7 +30,7 @@ function myFunc()
 	catch(error)
 	{
 		// alert(error);
-		document.getElementById("demo").innerHTML = error;
+		document.getElementById("demo").innerHTML = error.name;
 	}
 	
 
