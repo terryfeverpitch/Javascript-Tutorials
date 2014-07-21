@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		HTML DOM Object Attributes.
+		<pre>
+			1. getElementById
+			2. getElementByName
+			3. appendChild( node )
+			4. removeChild( node )
+		</pre>
+		<a href="http://www.w3schools.com/js/js_htmldom_document.asp">Learn more...</a>
+	</head>
+
+	<body>
+		<div id = "div1">
+			<p id = "p1"> This is P1.</p>
+			<p id = "p2"> This is P2.</p>
+			<p id = "p3"> This is P3.</p>
+			<button onclick = "myFunc()"> Click </button>
+		</div>
+		<script>
+			function myFunc()
+			{
+				document.getElementById("p1").innerHTML = "change P1";
+				document.getElementById("p2").style.color = "red";
+
+				var result = document.getElementsByTagName("p");
+				document.getElementById("p3").innerHTML = result.length;
+
+				var tmp = document.getElementById("p3");
+				document.getElementById("div1").removeChild(tmp);
+			}
+		
+		</script>
+	</body>
+</html>

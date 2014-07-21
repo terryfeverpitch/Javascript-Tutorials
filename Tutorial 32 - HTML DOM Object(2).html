@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		HTML DOM Object Attributes.
+		<pre>
+			1. content 	: x.innerHTML
+			2. name 		: x.nodeName
+			3. value 		: x.nodeValue
+			4. parent 		: x.parentNode
+			5. child 		: x.childNodes
+			6. attributes 	: x.attributes 	
+		</pre>
+		<a href="http://www.w3schools.com/js/js_htmldom.asp">Learn more...</a>
+	</head>
+
+	<body>
+		<h1>My First Page</h1>
+
+		<p id = "demo1"> This is Terry.</p>
+		<p id = "demo2"> This is Joe.</p>
+
+		<script>
+			var str, newline = "<br>"; 
+
+			str = document.getElementById("demo1").innerHTML; // get HTML content.
+			document.write(str + newline);
+			
+			str = document.getElementById("demo1").nodeName; // get node name.
+			document.write(str + newline);
+			
+			str = document.getElementById("demo1").nodeValue; // get node value.
+			document.write(str + newline);
+			
+			str = document.getElementById("demo1").parentNode; // get parent node.
+			document.write(str + newline);
+			
+			str = document.getElementById("demo1").childNodes; // get child nodes (list array).
+			document.write(str + newline);
+
+			str = document.getElementById("demo1").attributes; // get attributes (mapping).
+			document.write(str + newline);
+
+			str = document.getElementById("demo1").attributes.length;
+			document.write(str + newline);
+
+			str = document.getElementById("demo1").attributes[0].nodeValue;
+			document.write(str + newline);
+
+		</script>
+	</body>
+</html>
