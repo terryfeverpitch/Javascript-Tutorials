@@ -16,6 +16,8 @@
 			var str = watchDog.responseText;
 			if(watchDog.readyState == 4 && watchDog.status == 200)
 				document.getElementById("label").innerHTML = str;
+			else if(watchDog.status == 404)
+				document.getElementById("label").innerHTML = str;
 		}
 		watchDog.open("GET", "ajax_info.txt", true);
 		watchDog.send();
