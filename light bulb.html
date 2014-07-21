@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<marquee>顯示內容</marquee>
+</head>
+
+<body>
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("bulb_on")) {
+        image.src = "bulb_off.gif";
+    } else {
+        image.src = "bulb_on.gif";
+    }
+}
+</script>
+
+<img id="myImage" onclick="changeImage()" src="bulb_off.gif" width="100" height="180">
+
+<p>Click the light bulb to turn on/off the light</p>
+
+</body>
+</html>
