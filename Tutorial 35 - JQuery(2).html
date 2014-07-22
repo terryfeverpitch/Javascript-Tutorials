@@ -1,0 +1,54 @@
+<html>
+	<head>
+		jQuery Effects - #(selector).action... 
+		<HR>
+		<a href="http://www.w3schools.com/jquery/jquery_ref_effects.asp"> Learn more... </a>
+		<HR>
+
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			// "tag name"
+			// "#id"
+			// ".class name"
+				$("button").click(function(){
+					var sid = this.id;
+					switch(sid)
+					{
+						case "sb1":
+							$("#p1").show();
+							break;
+						case "sb2":
+							$("#p2").show();
+							break;
+						case "sb3":
+							$("#p3").show();
+							break;
+						case "hb1":
+							$("#p1").hide();
+							break;
+						case "hb2":
+							$("#p2").hide();
+							break;
+						case "hb3":
+							$("#p3").hide();
+							break;
+					}
+					// hide, show, slideUp, fadeOut...
+					
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<button id = "sb1"> Show P1 </button> <button id = "sb2"> Show P2 </button> <button id = "sb3"> Show P3 </button> <BR>
+		<button id = "hb1"> Hide P1 </button> <button id = "hb2"> Hide P2 </button> <button id = "hb3"> Hide P3 </button> <BR>
+
+		<h1>
+			<p id = "p1" class = "paragraph"> This is P1. </p>
+			<p id = "p2" class = "paragraph"> This is P2. </p>
+			<p id = "p3" class = "paragraph"> This is P3. </p>
+		</h1>
+	</body>
+</html>

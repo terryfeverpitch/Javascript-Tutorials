@@ -1,0 +1,88 @@
+<html>
+	<head>
+		jQuery HTML<BR> 
+		attr, clone, replaceWith, detach, append, prepend, wrap, unwrap, empty, remove, ......
+		<HR>
+		<a href="http://www.w3schools.com/jquery/jquery_ref_html.asp"> Learn more... </a>
+		<HR>
+
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+		<script>
+			var flag = "android";
+			$(document).ready(function(){ // this is a function that will be excuted after document ready.
+				$("#btn1").click(function(){
+					$("img").attr("width", 300);
+					$("img").attr("height", 300);
+				});
+
+				$("#btn2").click(function(){
+					$("img").attr("width", 200);
+					$("img").attr("height", 200);
+				});
+
+				$("#btn3").click(function(){
+					var e = null;
+					e = $("img#android").clone();
+					e.attr("id", "pic");
+					$("img#pic").replaceWith(e);
+				});
+
+				$("#btn4").click(function(){
+					var e = null;
+					e = $("img#android").detach();
+					e.attr("id", "pic");
+					$("img#pic").replaceWith(e);
+				});
+
+				$("#btn5").click(function(){
+					var e;
+					e = $("img#apple").clone();
+					$("img#pic").replaceWith(e);	
+				});
+
+				$("#btn6").click(function(){
+					$("p#p1").wrap("<h1> </h1>");
+				});
+
+				$("#btn7").click(function(){
+					$("p#p1").unwrap();
+				});
+
+				$("#btn8").click(function(){
+					$("div").empty();
+				});
+
+				$("#btn9").click(function(){
+					$("div").remove();
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<h1>
+			<p id = "p1"> This is a P1. 
+			<p id = "p2"> This is a P2. 
+		</h1>
+		<button id = "btn6"> Wrap H1 </button>
+		<button id = "btn7"> Unwrap H1 </button>
+		<HR>
+		<img id = "android" 
+			 src = "https://lh5.googleusercontent.com/-N8bz9q4Kz0I/AAAAAAAAAAI/AAAAAAAAAAs/Icl2bQMyK7c/photo.jpg" 
+			 width = 200 height = 200> </img>
+		<img id = "apple" 
+			 src = "http://upload.wikimedia.org/wikipedia/zh-yue/a/ab/Apple-logo.png" 
+			 width = 200 height = 200 > </img>	
+		<button id = "btn1"> Bigger </button>
+		<button id = "btn2"> Smaller </button>
+
+		<button id = "btn3"> Copy and Paste </button>
+		<button id = "btn4"> Cut and Paste </button>
+		<button id = "btn5"> Replace With Apple </button>
+		<img id = "pic" src = "" width = 200 height = 200> </img>
+		<HR>
+		<div style = "width:200px; height:200px; background:yellow;"> This is Div. </div>
+		<button id = "btn8"> Empty Div </button>
+		<button id = "btn9"> Remove Div </button>
+	</body>
+</html>

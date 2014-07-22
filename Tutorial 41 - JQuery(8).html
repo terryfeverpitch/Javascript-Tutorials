@@ -1,0 +1,75 @@
+<html>
+	<head>
+		jQuery CSS<BR> 
+		<HR>
+		<a href="http://www.w3schools.com/jquery/jquery_css.asp"> Learn more... </a>
+		<HR>
+
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+		<script>
+			var flag = "android";
+			$(document).ready(function(){ // this is a function that will be excuted after document ready.
+				var flag = true;
+
+				$("button#btn1").click(function(){
+					var x = "W : " + $("div#div1").css("width") + " H : "+ $("div#div1").css("height");
+					$("p#p2").text(x);
+				});
+
+				$("button#btn2").click(function(){
+					var newColor = "#" + (0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+  					$("div#div1").css("background", newColor);
+				});
+
+				$("button#btn3").click(function(){
+					if(flag) {
+						var w = $("input#width").val();
+						var h = $("input#height").val();
+						$("div#div1").css({"width": w, "height": h});
+					}
+				});
+
+				$("input").keyup(function(){
+					if(!$.isNumeric(this.value)){
+						$("p#p2").text(this.value + "is not numeric.");
+						flag = false;
+					}	
+						
+					else {
+						if(this.id == "width") {
+							if(this.value <= 1520 && this.value >= 100){
+								$("p#p2").text("info.");
+								flag = true;
+							}
+							else {
+								$("p#p2").text(" illegal " + this.id + "(100 ~ 1520).");
+								flag = false;
+							}
+						}
+						else if(this.id == "height") {
+							if(this.value <= 220 && this.value >= 22){
+								$("p#p2").text("info.");
+								flag = true;
+							}
+							else {
+								$("p#p2").text(" illegal " + this.id + "(22 ~ 220).");
+								flag = false;
+							}
+						}
+					}
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id = "div1" style = "width:1520; height:22; background-color:blue" > This is Div. </div>
+		
+		<p id = "p2"> info. </p>
+		
+		<button id = "btn1"> show size </button>
+		<button id = "btn2"> change BG color </button> <BR>
+		<button id = "btn3"> change size </button> 
+		width : <input id = "width" value = "1520"> </input>  height : <input id = "height" value = "22"> </input>
+	</body>
+</html>

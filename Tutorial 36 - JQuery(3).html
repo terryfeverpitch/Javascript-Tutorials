@@ -1,0 +1,43 @@
+<html>
+	<head>
+		jQuery Selector - #(*) ... 
+		<HR>
+		<a href="http://www.w3schools.com/jquery/jquery_ref_selectors.asp"> Learn more... </a>
+		<HR>
+
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			// "tag name"
+			// "#id"
+			// ".class name"
+				$("button.show").click(function(){
+					var str = "p#" + this.value;
+					$(str).show();
+					// document.write(str + "<BR>");
+				});
+
+				$("button.hide").click(function(){
+					var str = "p#" + this.value;
+					$(str).hide();
+					// document.write(str + "<BR>");		
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<button class = "show" value = "p1"> Show P1 </button> 
+		<button class = "show" value = "p2"> Show P2 </button> 
+		<button class = "show" value = "p3"> Show P3 </button> <BR>
+		<button class = "hide" value = "p1"> Hide P1 </button> 
+		<button class = "hide" value = "p2"> Hide P2 </button> 
+		<button class = "hide" value = "p3"> Hide P3 </button> <BR>
+
+		<h1>
+			<p id = "p1"> This is P1. </p>
+			<p id = "p2"> This is P2. </p>
+			<p id = "p3"> This is P3. </p>
+		</h1>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+	<head>
+		jQuery Effects <BR>
+		hide, show, toggle, slideDown, slideUp, slideToggle, fadeIn, fadeOut, fadeTo, animate, ......
+		<HR>
+		<a href="http://www.w3schools.com/jquery/jquery_ref_effects.asp"> Learn more... </a>
+		<HR>
+
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+		<script>
+			$(document).ready(function(){
+				$("#show").click(function(){
+					$("div").show();
+				});
+				$("#hide").click(function(){
+					$("div").hide();
+				});
+				$("#toggle").click(function(){
+					$("div").toggle();
+				});
+
+				$("#slideDown").click(function(){
+					$("div").slideDown();
+				});
+				$("#slideUp").click(function(){
+					$("div").slideUp();
+				});
+				$("#slideToggle").click(function(){
+					$("div").slideToggle();
+				});
+
+				$("#fadeIn").click(function(){
+					$("div").fadeIn("1");
+				});
+				$("#fadeOut").click(function(){
+					$("div").fadeOut("0");
+				});
+				$("#fadeTo1").click(function(){
+					$("div").fadeTo("slow", 1);
+				});
+				$("#fadeTo2").click(function(){
+					$("div").fadeTo("slow", 0.5);
+				});
+
+				$("#animate").click(function(){
+					$("div").animate({width:400,  opacity:0.4, fontSize:"25"}, "slow");
+					$("div").animate({height:250, opacity:0.8, fontSize:"30"}, "slow");
+					$("div").animate({width:150,  opacity:0.6, fontSize:"20"}, "slow");
+					$("div").animate({height:100, opacity:1}, "slow");
+				});
+			});
+		
+		</script>
+	</head>
+	
+	<body>
+		<button id = "show"> Show </button>
+		<button id = "hide"> Hide </button>
+		<button id = "toggle"> Toggle </button> <BR>
+		<button id = "slideDown"> Slide Down </button>
+		<button id = "slideUp"> Slide Up </button>
+		<button id = "slideToggle"> Slide Toggle </button> <BR>
+		<button id = "fadeIn"> Fade In </button>
+		<button id = "fadeOut"> Fade Out </button>
+		<button id = "fadeTo1"> Fade To 1 </button> 
+		<button id = "fadeTo2"> Fade To 0.5 </button><BR>
+		<button id = "animate"> Play </button><BR>
+		<div style = "width:150px; height:100px; background:green;"> 繁體中文-台灣 <BR> Traditional Chinese-Taiwan </div>
+	</body>
+</html>

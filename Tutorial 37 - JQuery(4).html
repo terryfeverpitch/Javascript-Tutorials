@@ -1,0 +1,43 @@
+<html>
+	<head>
+		jQuery Events <BE>
+		ready, click, dblclick, focus, blur, ... ...
+		<HR>
+		<a href="http://www.w3schools.com/jquery/jquery_ref_events.asp"> Learn more... </a>
+		<HR>
+
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("input").focus(function(){
+					$(this).css("background-color", "#f00");
+				});
+
+				$("input").blur(function(){
+					$(this).css("background-color", "#0f0");
+				});
+
+				$("input").click(function(){
+					$("#demo").html("mouse click.");
+				});
+
+				$("input").dblclick(function(){
+					$("#demo").html("mouse dblclick.");
+				});
+
+				$("input").mouseover(function(){
+					$("#demo").html("mouse over.");
+				});
+
+				$("input").mouseout(function(){
+					$("#demo").html("mouse leave.");
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		Your name : <input></input>
+		<h1 id = "demo"> info. </h1>
+	</body>
+</html>
