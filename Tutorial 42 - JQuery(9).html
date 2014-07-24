@@ -12,21 +12,19 @@
 					// $("div#div1").load("resource/demo_ajax_load.txt");
 
 					// $.ajax({pro:value, ...}); See sybtax and more properties : http://www.w3schools.com/jquery/ajax_ajax.asp
-					// $.ajax({url:"resource/demo_ajax_load.txt", success:function(result) {
-						// $("div#div1").html(result);
-					// }});
-
-					$("div#div1").load("resource/demo_ajax_load.txt");
+					$.ajax({url:"resource/demo_ajax_load.asp", success:function(result) {
+						$("div#div1").html(result);
+					}});
+					// $("div#div1").load("demo_ajax_load.asp");
 				});
+			});
 
-				$("div#div1").ajaxStart(function(){
-					$("div#div2").css("display", "block");
-				});
+			$(document).ajaxStart(function(){
+				$("div#div2").css("display", "block");
+			});
 
-				$("div#div1").ajaxComplete(function(){
-					$("div#div2").css("display", "none");
-				});
-
+			$(document).ajaxComplete(function(){
+				$("div#div2").css("display", "none");
 			});
 		</script>
 	</head>
@@ -36,7 +34,7 @@
 		</div>
 		<button> Get External Content </button>
 		<div id = "div2" style = "display:none">
-			<img src = "resource/ajax_loader.gif"> </img>
+			<img src = "resource/ajax-loader.gif"> </img>
 			Loading... ...
 		</div>
 
