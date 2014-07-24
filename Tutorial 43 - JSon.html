@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		JSON <BR>
+		SON: JavaScript Object Notation. <BR>
+		JSON is a syntax for storing and exchanging data. <BR>
+		JSON is an easier to use alternative to XML. <BR>
+		<a href = "http://www.w3schools.com/json/default.asp"> Learn more... </a> <HR>
+	</head>
+	<body>
+		<p id = "demo"> This is P1. </p>
+
+		<script>
+			var obj = {"name":"Terry", "addr":"Taiwan"};
+			var str = JSON.stringify(obj);
+			var obj_c = JSON.parse(str);
+			document.getElementById("demo").innerHTML = obj_c.name;
+		</script>
+	</body>
+</html>
